@@ -1,0 +1,13 @@
+ligando o servidor - 
+docker start 23ecd5cda350
+
+dps o banco de dados
+    mysql -h localhost -P 3306 --protocol=tcp -u root -p
+
+
+conectando o python
+python3 connection.py
+
+ligando o APP
+
+uvicorn main:app --reload
