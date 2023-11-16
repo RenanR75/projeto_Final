@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Adicionar Novo Curso</title>
+</head>
+<body>
+    <h1>Adicionar Novo Curso</h1>
+    
+    <form action="/addCurso" method="post">
+        <label for="idcurso">ID do Curso:</label>
+        <input type="number" id="idcurso" name="idcurso" required><br>
+        
+        <label for="nome">Nome do Curso:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="descricao">Descrição do Curso:</label>
+        <textarea id="descricao" name="descricao" required></textarea><br>
+
+        <label for="carga">Carga Horária:</label>
+        <input type="number" id="carga" name="carga" required><br>
+
+        <label for="totaulas">Total de Aulas:</label>
+        <input type="number" id="totaulas" name="totaulas" required><br>
+
+        <label for="ano">Ano do Curso:</label>
+        <input type="number" id="ano" name="ano" required><br>
+
+        <input type="submit" value="Adicionar Curso">
+    </form>
+
+    <a href="/getCursos">Voltar para a Lista de Cursos</a>
+</body>
+</html>
+

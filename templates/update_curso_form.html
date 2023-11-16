@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Curso</title>
+</head>
+<body>
+    <h1>Editar Curso</h1>
+
+    <!-- Botão Home -->
+    <a href="/">Home</a>
+    
+    <form action="/updateCurso/{{ curso.idcurso }}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{ curso.nome }}" required><br>
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" value="{{ curso.descricao }}" required><br>
+
+        <label for="carga">Carga:</label>
+        <input type="number" id="carga" name="carga" value="{{ curso.carga }}" required><br>
+
+        <label for="totaulas">Total de Aulas:</label>
+        <input type="number" id="totaulas" name="totaulas" value="{{ curso.totaulas }}" required><br>
+
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano" value="{{ curso.ano }}" required><br>
+
+        <button type="submit">Atualizar Curso</button>
+    </form>
+</body>
+</html>

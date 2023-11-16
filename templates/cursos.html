@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Cursos</title>
+</head>
+<body>
+    <h1>Lista de Cursos</h1>
+
+    <!-- Botão Home -->
+    <a href="/">Home</a>
+    <a href="https://shiny-giggle-4j79v9vwp7742xrq-8000.app.github.dev/addCurso">Adicionar um novo curso</a>
+    
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Carga</th>
+            <th>Total de Aulas</th>
+            <th>Ano</th>
+            <th>Ação</th>
+        </tr>
+        {% for curso in cursos %}
+            <tr>
+                <td>{{ curso.idcurso }}</td>
+                <td>{{ curso.nome }}</td>
+                <td>{{ curso.descricao }}</td>
+                <td>{{ curso.carga }}</td>
+                <td>{{ curso.totaulas }}</td>
+                <td>{{ curso.ano }}</td>
+                <td><a href="/deleteCurso/{{ curso.idcurso }}">Delete</a></td>
+                <td><a href="/updateCurso/{{ curso.idcurso }}">Editar</a></td>
+
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

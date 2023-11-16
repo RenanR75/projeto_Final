@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Curso</title>
+</head>
+<body>
+    <h1>Excluir Curso</h1>
+
+    <form action="/deleteCurso" method="post">
+        <label for="idcurso">ID do Curso a Excluir:</label>
+        <input type="number" id="idcurso" name="idcurso" value="{{ idcurso }}" readonly><br>
+
+        <input type="submit" value="Excluir Curso">
+    </form>
+
+    <a href="/getCursos">Voltar para a Lista de Cursos</a>
+</body>
+</html>
